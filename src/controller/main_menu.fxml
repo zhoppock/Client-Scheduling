@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="589.0" prefWidth="985.0" xmlns="http://javafx.com/javafx/11.0.1"
+            xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.main_menu_control">
+   <Button layoutX="753.0" layoutY="42.0" mnemonicParsing="false" onAction="#goToLogin" text="Logout"/>
+   <Button layoutX="442.0" layoutY="236.0" mnemonicParsing="false" onAction="#goToCustomers" text="View Customers"/>
+   <Button layoutX="433.0" layoutY="316.0" mnemonicParsing="false" onAction="#goToAppointments"
+           text="View Appointments"/>
+   <Label layoutX="288.0" layoutY="114.0" text="Welcome To the Client Scheduling Application">
+      <font>
+         <Font size="20.0"/>
+      </font>
+   </Label>
+   <Button layoutX="164.0" layoutY="470.0" mnemonicParsing="false" onAction="#goToAppointmentTypesReport"
+           text="Appointment Types Report"/>
+   <Button layoutX="405.0" layoutY="470.0" mnemonicParsing="false" onAction="#goToContactAppointmentsReport"
+           text="Contact Appointments Report"/>
+   <Button layoutX="661.0" layoutY="470.0" mnemonicParsing="false" onAction="#goToCustomerAppointmentsReport"
+           text="Customer Appointments Report"/>
+
+</AnchorPane>

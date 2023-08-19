@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<GridPane alignment="center" hgap="10" prefHeight="589.0" prefWidth="985.0" vgap="10" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.report1_control">
+   <columnConstraints>
+      <ColumnConstraints />
+      <ColumnConstraints />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints />
+      <RowConstraints />
+   </rowConstraints>
+   <AnchorPane prefHeight="614.0" prefWidth="892.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+      <Button layoutX="698.0" layoutY="12.0" mnemonicParsing="false" onAction="#goToMainMenu" text="Main Menu" />
+      <Button layoutX="805.0" layoutY="12.0" mnemonicParsing="false" onAction="#goToLogin" text="Logout" />
+      <Label layoutX="289.0" layoutY="24.0" text="Appointment Types by Month Report">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Label>
+      <TextArea fx:id="reportArea" editable="false" layoutX="82.0" layoutY="85.0" prefHeight="403.0" prefWidth="755.0" wrapText="true" />
+   </AnchorPane>
+</GridPane>
