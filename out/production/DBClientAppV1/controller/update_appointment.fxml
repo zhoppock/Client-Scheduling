@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<GridPane alignment="center" hgap="10" prefHeight="589.0" prefWidth="985.0" vgap="10"
+          xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1"
+          fx:controller="controller.update_appointment_control">
+   <columnConstraints>
+      <ColumnConstraints/>
+      <ColumnConstraints/>
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints/>
+      <RowConstraints/>
+   </rowConstraints>
+   <AnchorPane prefHeight="614.0" prefWidth="892.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+      <Button layoutX="698.0" layoutY="12.0" mnemonicParsing="false" onAction="#goToMainMenu" text="Main Menu"/>
+      <Button layoutX="805.0" layoutY="12.0" mnemonicParsing="false" onAction="#goToLogin" text="Logout"/>
+      <Label layoutX="357.0" layoutY="11.0" text="Update Appointment">
+         <font>
+            <Font size="19.0"/>
+         </font>
+      </Label>
+      <TextField fx:id="idTxt" disable="true" layoutX="174.0" layoutY="105.0" prefHeight="26.0" prefWidth="322.0"/>
+      <TextField fx:id="titleTxt" layoutX="174.0" layoutY="153.0" prefHeight="26.0" prefWidth="322.0"/>
+      <TextField fx:id="descriptionTxt" layoutX="174.0" layoutY="204.0" prefHeight="26.0" prefWidth="321.0"/>
+      <TextField fx:id="locationTxt" layoutX="174.0" layoutY="252.0" prefHeight="26.0" prefWidth="322.0"/>
+      <TextField fx:id="typeTxt" layoutX="174.0" layoutY="311.0" prefHeight="26.0" prefWidth="322.0"/>
+      <ComboBox fx:id="contactCombo" layoutX="573.0" layoutY="227.0" prefHeight="26.0" prefWidth="238.0"
+                promptText="Select Contact"/>
+      <Label layoutX="60.0" layoutY="109.0" text="ID:"/>
+      <Label layoutX="61.0" layoutY="157.0" text="Title:"/>
+      <Label layoutX="60.0" layoutY="256.0" text="Location:"/>
+      <Label layoutX="60.0" layoutY="316.0" text="Type:"/>
+      <Label layoutX="518.0" layoutY="367.0" text="Start Time:"/>
+      <Label layoutX="60.0" layoutY="209.0" text="Description:"/>
+      <Label layoutX="520.0" layoutY="422.0" text="End Time:"/>
+      <Label layoutX="573.0" layoutY="101.0" text="Customer:"/>
+      <TextField fx:id="customerTxt" disable="true" layoutX="574.0" layoutY="127.0" prefHeight="26.0"
+                 prefWidth="237.0"/>
+      <DatePicker fx:id="datePicker" layoutX="174.0" layoutY="376.0" onAction="#checkDate" onKeyPressed="#checkDate"
+                  onKeyTyped="#checkDate" prefHeight="26.0" prefWidth="238.0"
+                  promptText="Use Selector Button on the Right"/>
+      <Label layoutX="60.0" layoutY="381.0" text="Date:"/>
+      <ComboBox fx:id="startCombo" layoutX="617.0" layoutY="363.0" onAction="#startSelected" prefWidth="150.0"
+                promptText="Select Start Time"/>
+      <ComboBox fx:id="endCombo" layoutX="617.0" layoutY="418.0" prefWidth="150.0" promptText="Select Timeframe"/>
+      <Button layoutX="321.0" layoutY="503.0" mnemonicParsing="false" onAction="#saveAppointment" text="Save"/>
+      <Button layoutX="394.0" layoutY="503.0" mnemonicParsing="false" onAction="#cancelAppointment"
+              text="Cancel"/>
+      <Label layoutX="574.0" layoutY="195.0" text="Contact:"/>
+      <Label layoutX="593.0" layoutY="468.0" text="- Appointments can last 30 minutes,"/>
+      <Label layoutX="603.0" layoutY="486.0" text="1 hour, 1 hour 30 minutes, or 2 hours."/>
+      <Label layoutX="593.0" layoutY="520.0" text="- Appointment times based on local time zone"/>
+      <Label layoutX="603.0" layoutY="537.0" text="compared to US/Eastern time zone."/>
+   </AnchorPane>
+</GridPane>

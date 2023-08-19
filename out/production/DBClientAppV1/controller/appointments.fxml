@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<GridPane alignment="center" hgap="10" prefHeight="589.0" prefWidth="985.0" vgap="10" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.appointments_control">
+    <columnConstraints>
+        <ColumnConstraints />
+        <ColumnConstraints />
+    </columnConstraints>
+    <rowConstraints>
+        <RowConstraints />
+        <RowConstraints />
+    </rowConstraints>
+    <AnchorPane prefHeight="614.0" prefWidth="892.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+        <Button layoutX="698.0" layoutY="12.0" mnemonicParsing="false" onAction="#goToMainMenu" text="Main Menu" />
+        <Button layoutX="805.0" layoutY="12.0" mnemonicParsing="false" onAction="#goToLogin" text="Logout" />
+        <TableView fx:id="dataTable" layoutX="-15.0" layoutY="150.0" prefHeight="280.0" prefWidth="919.0">
+            <columns>
+                <TableColumn fx:id="idColumn" prefWidth="39.19999694824219" text="ID" />
+                <TableColumn fx:id="titleColumn" prefWidth="84.79999542236328" text="Title" />
+                <TableColumn fx:id="descriptionColumn" prefWidth="120.5999984741211" text="Description" />
+                <TableColumn fx:id="contactNameColumn" prefWidth="116.5999755859375" text="Contact" />
+                <TableColumn fx:id="locationColumn" prefWidth="109.19998168945312" text="Location" />
+                <TableColumn fx:id="typeColumn" prefWidth="89.00003051757812" text="Type" />
+                <TableColumn fx:id="startColumn" prefWidth="113.39996337890625" text="Start" />
+                <TableColumn fx:id="endColumn" prefWidth="113.0" text="End" />
+                <TableColumn fx:id="customerIdColumn" prefWidth="80.79998779296875" text="Customer ID" />
+                <TableColumn fx:id="userIdColumn" prefWidth="49.599963378906295" text="User ID" />
+            </columns>
+        </TableView>
+        <Button layoutX="256.0" layoutY="481.0" mnemonicParsing="false" onAction="#goToUpdateAppointment" text="Update Appointment" />
+        <Button layoutX="504.0" layoutY="481.0" mnemonicParsing="false" onAction="#deleteAppointment" text="Cancel Appointment" />
+        <Label layoutX="385.0" layoutY="11.0" text="Appointments">
+            <font>
+                <Font size="19.0" />
+            </font>
+        </Label>
+        <RadioButton fx:id="weekRadio" layoutX="406.0" layoutY="82.0" mnemonicParsing="false" onAction="#weekSelected" text="Show Current Week">
+            <toggleGroup>
+                <ToggleGroup fx:id="timeframe" />
+            </toggleGroup>
+        </RadioButton>
+        <RadioButton fx:id="monthRadio" layoutX="629.0" layoutY="82.0" mnemonicParsing="false" onAction="#monthSelected" text="Show Current Month" toggleGroup="$timeframe" />
+      <RadioButton fx:id="allRadio" layoutX="169.0" layoutY="82.0" mnemonicParsing="false" onAction="#allSelected" selected="true" text="Show All" toggleGroup="$timeframe" />
+    </AnchorPane>
+</GridPane>

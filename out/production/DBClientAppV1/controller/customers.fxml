@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<GridPane alignment="center" hgap="10" prefHeight="589.0" prefWidth="985.0" vgap="10"
+          xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1"
+          fx:controller="controller.customers_control">
+    <columnConstraints>
+        <ColumnConstraints/>
+        <ColumnConstraints/>
+    </columnConstraints>
+    <rowConstraints>
+        <RowConstraints/>
+        <RowConstraints/>
+    </rowConstraints>
+    <AnchorPane prefHeight="614.0" prefWidth="892.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+        <Button layoutX="698.0" layoutY="12.0" mnemonicParsing="false" onAction="#goToMainMenu" text="Main Menu"/>
+        <Button layoutX="805.0" layoutY="12.0" mnemonicParsing="false" onAction="#goToLogin" text="Logout"/>
+        <TableView fx:id="dataTable" layoutX="92.0" layoutY="98.0" prefHeight="280.0" prefWidth="706.0">
+            <columns>
+                <TableColumn fx:id="idColumn" prefWidth="39.4000244140625" text="ID"/>
+                <TableColumn fx:id="nameColumn" prefWidth="107.39999771118164" text="Customer Name"/>
+                <TableColumn fx:id="addressColumn" prefWidth="131.8000030517578" text="Address"/>
+                <TableColumn fx:id="postalCodeColumn" prefWidth="75.4000244140625" text="Postal Code"/>
+                <TableColumn fx:id="phoneColumn" prefWidth="153.39996337890625" text="Phone"/>
+                <TableColumn fx:id="divisionColumn" prefWidth="85.4000244140625" text="Division"/>
+                <TableColumn fx:id="countryColumn" prefWidth="106.4000244140625" text="Country"/>
+            </columns>
+        </TableView>
+        <Button layoutX="207.0" layoutY="425.0" mnemonicParsing="false" onAction="#goToAddCustomer"
+                text="Add Customer"/>
+        <Button layoutX="390.0" layoutY="425.0" mnemonicParsing="false" onAction="#goToUpdateCustomer"
+                text="Update Customer"/>
+        <Button layoutX="593.0" layoutY="425.0" mnemonicParsing="false" onAction="#deleteCustomer"
+                text="Delete Customer"/>
+        <Label layoutX="400.0" layoutY="11.0" text="Customers">
+            <font>
+                <Font size="19.0"/>
+            </font>
+        </Label>
+        <Button layoutX="389.0" layoutY="500.0" mnemonicParsing="false" onAction="#goToAddAppointment"
+                text="Add Appointment"/>
+    </AnchorPane>
+</GridPane>
